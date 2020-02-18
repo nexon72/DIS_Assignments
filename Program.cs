@@ -8,7 +8,7 @@ namespace Assignment2_Group6
         {
             //QUESTION 1
             Console.WriteLine("Question 1");
-            int[] l1 = new int[] { 5, 6, 6, 9, 9, 12 };
+            int[] l1 = new int[] { 2, 3, 9, 9, 9, 9, 9, 12};
             int target = 9;
             int[] r = TargetRange(l1, target);
             Console.WriteLine("[{0}]", string.Join(", ", r));
@@ -71,7 +71,6 @@ namespace Assignment2_Group6
             Console.WriteLine("Question 8");
             SolvePuzzle();
         }
-
         public static void DisplayArray(int[] a)
         {
             foreach (int n in a)
@@ -84,22 +83,32 @@ namespace Assignment2_Group6
         {
             bool found = false;
             int index = 0;
-            int position = -1;
-            int position2 = -1;
+            int position = -2;
+            int position2 = -2;
 
             try
             {
                 //Scan through the array 
-                while (!found && index < l1.Length)
+                while (index < l1.Length)
                 {
-                    if (l1[index] == t)
+                    if (l1[index] == t && !found)
                     {
                         found = true;
                         position = index;
-                        position2 = index + 1;
+                    }
+
+                    if (l1[index] == t && found == true)
+                    {
+                        position2 = index;
                     }
 
                     index++;
+                }
+
+                if (!found)
+                {
+                    position = -1;
+                    position2 = -1;
                 }
             }
             catch (Exception)
