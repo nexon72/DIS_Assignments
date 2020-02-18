@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Assignment2_Group6
 {
@@ -117,7 +118,64 @@ namespace Assignment2_Group6
         {
             try
             {
-                //write your code here
+                //Approach 1 : put all substrings into a list, then reverse each one and write
+                //them to the console 
+                /*
+                List<string> parts = new List<string>();
+
+                int indexStart = 0;
+                int indexEnd = 0;
+
+                for (int i = 0; i < s.Length; i++)
+                {
+
+                    if (!Char.IsWhiteSpace(s[i]))
+                    {
+                        if (i == s.Length - 1)
+                        {
+                            indexEnd += 1;
+                            parts.Add(s.Substring(indexStart, indexEnd));
+                        }
+                        else
+                        {
+                            indexEnd += 1;
+                        }
+                    }
+                    else
+                    {
+                        indexEnd += 1;
+                        parts.Add(s.Substring(indexStart, indexEnd));
+                        indexStart = i + 1;
+                        indexEnd = 0;
+                    }
+                }
+                parts.ForEach(Console.WriteLine);
+                */
+
+                //Approach 2 - reverse entire string then somehow rearrange so it maintains the same
+                //word order
+                /* 
+                Char[] newArr = s.ToCharArray();
+
+                for (int i = newArr.Length - 1; i >= 0; i--)
+
+                Console.Write(newArr[i]);
+                */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
             catch (Exception)
             {
