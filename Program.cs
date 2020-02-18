@@ -83,8 +83,8 @@ namespace Assignment2_Group6
         {
             bool found = false;
             int index = 0;
-            int position = -2;
-            int position2 = -2;
+            int position = -1;
+            int position2 = -1;
 
             try
             {
@@ -103,12 +103,6 @@ namespace Assignment2_Group6
                     }
 
                     index++;
-                }
-
-                if (!found)
-                {
-                    position = -1;
-                    position2 = -1;
                 }
             }
             catch (Exception)
