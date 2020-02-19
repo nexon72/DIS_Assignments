@@ -20,6 +20,8 @@ namespace Assignment2_Group6
             string s = "University of South Florida";
             string rs = StringReverse(s);
             Console.WriteLine(rs);
+            Console.WriteLine("Testing to check Nexon's code:");
+            Console.WriteLine();
 
             //QUESTION 3
             Console.WriteLine("Question 3");
